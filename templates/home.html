@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="jumbotron">
+            <h2>Hello</h2>
+            <p>Here you can search Github user's data</p>
+            <h1 class="text-center"> Github User Data </h1>
+	<div class="col-lg-12">
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped tablesorter">
+                <thead>
+                <tr>
+                  <th class="header"> Username <i class="icon-sort"></i></th>
+                  <th class="header"> Blog <i class="icon-sort"></i></th>
+                  <th class="header"> Public Repos <i class="icon-sort"></i></th>
+                  <th class="header"> Public Gists <i class="icon-sort"></i></th>
+                  <th class="header"> Email <i class="icon-sort"></i></th>
+                  <th class="header"> Followers <i class="icon-sort"></i></th>
+                  <th class="header"> Following <i class="icon-sort"></i></th>
+                </tr>
+            </thead>
+            <tbody>
+            
+                <tr>
+                    <td>{{ key.name }}</td>
+                    <td>{{ key.blog }}</td>
+                    <td>{{ key.public_repos }}</td>
+                    <td>{{ key.public_gists }}</td>
+                    <td>{{ key.email }}</td>
+                    <td>{{ key.followers }}</td>
+                    <td>{{ key.following }}</td>
+                </tr>
+            
+            
+        </div>
+    </div>
+</div>
+{% endblock %}
